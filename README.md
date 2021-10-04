@@ -1,6 +1,7 @@
 # mycode
 Learning about python code the week of 10/04/2021
 Add another line
+Let's learn how to use git to perform version control!
 # mycode (Project Title)
 
 One Paragraph of your project description goes here. Describe what you're trying to do.
