@@ -24,4 +24,3 @@ for i in netifaces.interfaces():
     except:
         print('Could not collect adapter info')
 
-
