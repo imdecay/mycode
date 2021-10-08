@@ -21,21 +21,15 @@ def main():
         if url == '':
             print("** Bad input - try again")
             continue
-    
-        print(f"Great! So we'll try to open this URL {url} to :")
-        searchFor = input("search for the phrase> ")
-    
-        resp = requests.get(url)  # Send HTTP GET
-        searchMe = resp.text      # strip everything off the response as a string (text)
-    
-        # use the re.search() to determine if our website has the pattern we are looking for
-        # it works by taking arguments, the first is the regex search pattern, and the second
-        # is the string to search within
-    
-        Found=re.findall(searchFor, searchMe)
 
-        if Found:
-            print(f"Found {len(Found)} match!")
+        print(f"Great! So we'll try to open this URL {url} to :")
+        search_for = input("search for the phrase> ")
+        resp = requests.get(url)  # Send HTTP GET
+        search_me = resp.text      # strip everything off the response as a string (text)
+
+        found=re.findall(search_for, search_me)
+        if found:
+            print(f"Found {len(found)} match!")
         else:
             print("No match!")
 
